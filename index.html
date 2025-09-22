@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/estilo.css">
+    <title>Formularios Dinammicos</title>
+</head>
+<body>
+    <nav class="barra-navegacion">
+        <div class="elemento-navegacion">
+            <a href="index.html"><span>Inicio</span></a>
+
+            <a href="prodcutos.html"><span>Productos</span></a>
+
+            <a href="api.html"><span>API</span></a>
+
+        </div>
+    </nav>
+<br>
+ <h1>FOMULARIO DINAMICO y API</h1>
+
+ <div class="formDinamico">
+    <p>
+        <h2>Formulario dinámico </h2> <br>
+        En la página tienes una zona vacía #elementos donde se insertan tarjetas creadas dinámicamente y un formulario oculto (#contenedor_formulario_producto_nuevo) con inputs para imagen, nombre, descripción y precio; un botón fuera del formulario llama a mostrarFormularioAgregarProducto() para mostrar/ocultarlo. En JavaScript manejas un arreglo productos y una clase Producto para almacenar cada producto; obtenerImagen(event) usa FileReader para convertir la imagen subida en una dataURL y previsualizarla, y AgregarProducto(event) crea un FormData, valida los campos y añade un nuevo Producto al arreglo, luego llama a crearTarjeta() que construye el DOM (imagen, título, descripción, precio, botón) y lo inserta en #elementos. También tienes una función crearimagen(event) (usada para ejemplos) que genera N tarjetas repetidas con una imagen fija y texto de muestra. En conjunto el flujo es: mostrar formulario → subir/preview imagen → completar campos → agregar → aparece la tarjeta en la lista dinámica.
+    </p>
+ </div>
+ <br>
+ <div class="API">
+    <p>
+        <h2>API</h2> <br>
+        La página tiene un botón Mostrar/Ocultar y un contenedor #contenedor donde se insertan las tarjetas de Pokémon; originalmente la intención es obtener la lista desde https://pokeapi.co/api/v2/pokemon?limit=100. El script fetch.js hace una petición para la lista y luego solicita los detalles de cada Pokémon (sprites y nombre) para crear tarjetas con la imagen (sprites.front_default) y el nombre, que se insertan en #contenedor. Con el toggle se controla la visibilidad del grid: al mostrarlo se cargan (o se muestran) las tarjetas y al ocultarlo se oculta el contenedor; en la versión corregida se evita ejecutar las peticiones automáticamente al cargar la página y se cargan los datos sólo la primera vez que el usuario abre el contenedor (lazy load), evitando peticiones innecesarias.
+    </p>
+ </div>
+
+<div class="imgg"> <img src="recursos/glorpcat.png" alt=""> </div>
+
+
+</body>
+    <script src="js/script.js"></script>
+    <script src="js/formulario.js"></script>
+    <script src="js/fetch.js"></script>
+</html>

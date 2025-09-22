@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Pokédex Interactiva</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/estiloAPI.css">
+</head>
+<body>
+    <nav class="barra-navegacion">
+        <div class="elemento-navegacion">
+            <a href="index.html"><span>Inicio</span></a>
+            <a href="prodcutos.html"><span>Productos</span></a>
+            <a href="api.html"><span>API</span></a>
+        </div>
+    </nav>
+
+    <h1>Lista de Pokémon</h1>
+
+    <!-- Botón para alternar la visibilidad de las tarjetas -->
+    <input type="button" id="toggle-btn" value="Mostrar/Ocultar" onclick="mostrarPoke()">
+
+    <!-- Contenedor principal donde se insertarán las tarjetas, inicialmente oculto -->
+    <div id="contenedor" class="hidden"></div>
+
+    <script src="js/fetch.js"></script>
+</body>
+</html>
+

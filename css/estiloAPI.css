@@ -1,0 +1,101 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #000000;
+}
+
+/* Barra de navegación fija */
+.barra-navegacion {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #522585;
+    padding: 15px 0;
+    z-index: 1000;
+}
+
+/* Contenedor de los enlaces de navegación */
+.elemento-navegacion {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.elemento-navegacion a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 12px 15px;
+    text-decoration: none;
+    color: #ecf0f1;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    border-bottom: 3px solid transparent;
+}
+
+h1 {
+    text-align: center;
+    margin-top: 80px; /* Ajuste para que no quede debajo de la barra fija */
+}
+
+/* Estilo del botón de mostrar/ocultar */
+#toggle-btn {
+    width: 30%;
+    display: block;
+    margin: 1rem auto;
+    padding: 16px 32px;
+    background-color: #522585;
+    color: #fff;
+    border: 3px solid #ffffff;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+
+}
+
+/* Contenedor de tarjetas: diseño tipo grid */
+#contenedor {
+    display: grid; 
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 1rem;
+    padding: 1rem;
+}
+
+/* Cada tarjeta de Pokémon */
+.contenedor-tarjeta {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    padding: 1rem;
+    text-align: center;
+}
+
+/* Imagen del Pokémon dentro de la tarjeta */
+.imagen-pokemon {
+    width: 100px;
+    height: auto;
+}
+
+/* Nombre del Pokémon (texto) */
+.contenedor-tarjeta p {
+    margin: 0.5rem 0 0;
+    font-weight: bold;
+    text-transform: capitalize;
+}
+
+/* Clase para ocultar el contenedor */
+.hidden{display:none}
+
+
+/* Mensaje de error / carga */
+.estado{
+grid-column: 1 / -1;
+text-align:center;
+padding:1rem;
+}

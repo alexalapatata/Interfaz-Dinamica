@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/estilo.css">
+    <title>Formularios Dinammicos</title>
+</head>
+<body>
+    <nav class="barra-navegacion">
+        <div class="elemento-navegacion">
+            <a href="index.html"><span>Inicio</span></a>
+
+            <a href="prodcutos.html"><span>Productos</span></a>
+
+            <a href="api.html"><span>API</span></a>
+
+        </div>
+    </nav>
+
+        <div id="elementos" class="elementos">
+
+        </div>
+
+        <div id="contenedor_formulario_producto_nuevo"
+            class="contenedor_formulario_producto_nuevo">
+            <form id="formulario_producto_nuevo">
+                <img id="imagen-file" class="imagen-previsulizacion">
+                <label for="Imagen"></label>
+                <input type="file" name="Imagen" id="imagen_producto"
+                    onchange="obtenerImagen(event)">
+
+                <label for="Nombre">Nombre</label>
+                <input type="text" name="Nombre" id="nombre_producto" required>
+
+                <label for="Descripcion">Descripcion</label>
+                <textarea name="Descripcion" id="descripcion"
+                    required></textarea>
+
+                <label for="Precio">Precio</label>
+                <input type="number" name="Precio" id="precio" required>
+            </form>
+            <button onclick="AgregarProducto(event)">Agregar</button>
+        </div>
+
+        <input class="boton-agregar-producto" type="button"
+            value="Agregar producto" onclick="mostrarFormularioAgregarProducto()">
+</body>
+    <script src="js/script.js"></script>
+    <script src="js/formulario.js"></script>
+    <script src="js/fetch.js"></script>
+</html>
